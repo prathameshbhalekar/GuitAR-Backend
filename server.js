@@ -11,7 +11,6 @@ const port = process.env.PORT || 9000
 app.use(cors())
 
 app.use(express.json())
-console.log(process.env.MONGODB_PASSWORD)
 const connection_url = 
 'mongodb+srv://admin:' + process.env.MONGODB_PASSWORD + '@cluster0.jx3fl.mongodb.net/guitarappdb?retryWrites=true&w=majority'
 mongoose.connect(connection_url,{
