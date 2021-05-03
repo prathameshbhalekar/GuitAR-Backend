@@ -3,15 +3,17 @@ import mongoose from "mongoose"
 import users from './dbUser.js'
 import cors from 'cors'
 import dbSongs from './dbSongs.js'
+import dotenv from "dotenv"
+dotenv.config();
+
 const app = express()
 const port = process.env.PORT || 9000
-
 app.use(cors())
 
 app.use(express.json())
-
+console.log(process.env.MONGODB_PASSWORD)
 const connection_url = 
-'mongodb+srv://admin:oTLGvEyjtcdAgvRL@cluster0.jx3fl.mongodb.net/guitarappdb?retryWrites=true&w=majority'
+'mongodb+srv://admin:' + process.env.MONGODB_PASSWORD + '@cluster0.jx3fl.mongodb.net/guitarappdb?retryWrites=true&w=majority'
 mongoose.connect(connection_url,{
     useCreateIndex: true,
     useNewUrlParser: true,
@@ -207,5 +209,3 @@ app.get('/api/v1/songs/getFromTitle', (req, res) => {
 })
 
 app.listen(port, () => console.log(`Listening on localhost:${port}`))
-
-// oTLGvEyjtcdAgvRL
