@@ -21,12 +21,12 @@ where YOUR_GITHUB_USER_NAME is your GitHub handle.
 
 ### Setup .env file
 1. Add .env file at ```src/``` using ```mkdir .env```
-2. Add your mongoDB Atlas Password below
+2. Add your mongoDB URL below
 ```
-MONGODB_PASSWORD = YOUR_MONGODB_PASSWORD_HERE
+MONGODB_URL = YOUR_MONGODB_URL
 ```
 ### Build Database
-Build database using scrapping script ![here](https://github.com/prathameshbhalekar/GuitAR-scrapping)
+Build database using scrapping script [here](https://github.com/prathameshbhalekar/GuitAR-scrapping)
 ### Run the app
 
 Now you can run GuitAR React application by following the steps below:
